@@ -71,7 +71,7 @@
     <div class="row">
 
         <div class="col-sm-6">
-            <img id="theImage" src="/img/lisavarusteet/<%= varusteet.getPolku()%>.png" class="img-responsive" alt="<%= varusteet.getNimi()%>">
+            <img id="theImage" src="/img/lisavarusteet/<%= varusteet.getKuva()%>" class="img-responsive" alt="<%= varusteet.getNimi()%>">
         </div>
         <div class="col-sm-6">
             <h2><%= varusteet.getNimi()%></h2>
