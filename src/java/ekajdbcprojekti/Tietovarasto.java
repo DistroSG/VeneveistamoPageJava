@@ -21,24 +21,24 @@ public class Tietovarasto {
     }
 
     public Tietovarasto() {
-        this("com.mysql.jdbc.Driver", "jdbc:mysql://localhost:3306/henkilostokanta",
-                "saku", "salainen");
+        this("com.mysql.jdbc.Driver", "jdbc:mysql://eu-cdbr-azure-north-c.cloudapp.net:3306/veneveistamo",
+                "bb372d8eaf1594", "c887b8c8");
     }
 
-    public List<Henkilo> haeKaikkiHenkilot() {
-        List<Henkilo> henkilot = new ArrayList<Henkilo>();
+    public List<Malli> haeMallit() {
+        List<Malli> mallit = new ArrayList<>();
         Connection yhteys = yhteys = YhteydenHallinta.avaaYhteys(ajuri, url, kayttaja, salasana);
         if (yhteys != null) {
             PreparedStatement hakulause = null;
             ResultSet tulosjoukko = null;
             try {
-                String hakuSql = "select henkiloNumero,etunimi,sukunimi,osasto, palkka from henkilosto";
+                String hakuSql = "SELECT id, malli, masto FROM malli;";
                 hakulause = yhteys.prepareStatement(hakuSql);
                 tulosjoukko = hakulause.executeQuery();
 
                 while (tulosjoukko.next()) {
-                    henkilot.add(new Henkilo(tulosjoukko.getInt(1),
-                            tulosjoukko.getString(2), tulosjoukko.getString(3), tulosjoukko.getString(4), tulosjoukko.getDouble(5)));
+                    mallit.add(new Malli(tulosjoukko.getInt(1),
+                            tulosjoukko.getString(2), tulosjoukko.getInt(3)));
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -48,7 +48,65 @@ public class Tietovarasto {
                 YhteydenHallinta.suljeYhteys(yhteys);
             }
         }
-        return henkilot;
+        return mallit;
+    }
+
+    public List<Varusteet> haeKaikkiVarusteet() {
+        List<Varusteet> varusteet = new ArrayList<>();
+        Connection yhteys = yhteys = YhteydenHallinta.avaaYhteys(ajuri, url, kayttaja, salasana);
+        if (yhteys != null) {
+            PreparedStatement hakulause = null;
+            ResultSet tulosjoukko = null;
+            try {
+                String hakuSql = "SELECT id, varusteet, kuvaus, hinta FROM varusteet;";
+                hakulause = yhteys.prepareStatement(hakuSql);
+                tulosjoukko = hakulause.executeQuery();
+
+                while (tulosjoukko.next()) {
+                    varusteet.add(new Varusteet(tulosjoukko.getInt(1),
+                            tulosjoukko.getString(2), tulosjoukko.getString(3), tulosjoukko.getDouble(4)));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                YhteydenHallinta.suljeTulosjoukko(tulosjoukko);
+                YhteydenHallinta.suljeLause(hakulause);
+                YhteydenHallinta.suljeYhteys(yhteys);
+            }
+        }
+        return varusteet;
+    }
+
+    public Varusteet haeVaruste(int varustenNumero) {
+
+        Connection yhteys = YhteydenHallinta.avaaYhteys(ajuri, url,
+                kayttaja, salasana);
+        if (yhteys == null) {
+            return null;
+        }
+        PreparedStatement hakulause = null;
+        ResultSet tulosjoukko = null;
+        try {
+            String hakuSql = "SELECT id, varusteet, kuvaus, hinta FROM varusteet where id=?";
+            hakulause = yhteys.prepareStatement(hakuSql);
+            hakulause.setInt(1, varustenNumero);
+            tulosjoukko = hakulause.executeQuery();
+            if (tulosjoukko.next()) {
+                return new Varusteet(tulosjoukko.getInt(1),
+                        tulosjoukko.getString(2),
+                        tulosjoukko.getString(3),
+                        tulosjoukko.getDouble(4));
+            } else {
+                return null;
+            }
+
+        } catch (Exception e) {
+            return null;
+        } finally {
+            YhteydenHallinta.suljeTulosjoukko(tulosjoukko);
+            YhteydenHallinta.suljeLause(hakulause);
+            YhteydenHallinta.suljeYhteys(yhteys);
+        }
     }
 
 //    public void lisaaHenkilo(Henkilo uusihenkilo) {
@@ -126,35 +184,4 @@ public class Tietovarasto {
 //        }
 //    }
 //    
-//    public Henkilo haeHenkilo(int henkiloID) {
-//        //palautta null, jos henkiloID:llä ei löydy henkilöä
-//        Connection yhteys=YhteydenHallinta.avaaYhteys(ajuri, url, kayttaja, salasana);
-//        if(yhteys==null) return null;
-//        PreparedStatement hakulause=null;
-//        ResultSet tulosjoukko=null;
-//        try{
-//            String hakuSql="select * from henkilo where henkiloID=?";
-//            hakulause=yhteys.prepareStatement(hakuSql);
-//            hakulause.setInt(1, henkiloID);
-//            tulosjoukko=hakulause.executeQuery();
-//            if(tulosjoukko.next()) {
-//                return new Henkilo(tulosjoukko.getInt(1),       //ID
-//                                    tulosjoukko.getString(2),   //etunimi
-//                                    tulosjoukko.getString(3),   //sukunimi
-//                                    tulosjoukko.getInt(4));     //syntymävuosi
-//            }
-//            else { //jos ei löytynyt eli tulosjoukko oli tyhjä
-//                return null;
-//            }
-//        }
-//        catch(Exception e) {
-//            e.printStackTrace();
-//            return null;
-//        }
-//        finally{
-//            YhteydenHallinta.suljeTulosjoukko(tulosjoukko);
-//            YhteydenHallinta.suljeLause(hakulause);
-//            YhteydenHallinta.suljeYhteys(yhteys);
-//        }
-//    }
 }

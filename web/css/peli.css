@@ -1,0 +1,65 @@
+#theImage{
+    position: relative; top: 0; left: 0;
+}
+.Image2{
+    position: absolute; top: 0; left: 0;
+} 
+#kuva_container{
+    position: relative; left: 0; top: 0;
+}
+.button
+{
+    width: 35px;  height: 35px;
+    margin: 0 4px 0 4px;
+    cursor:pointer;
+    border:  2px solid darkgrey;
+}
+#Punainen{
+    background: url("http://veneveistamo.azurewebsites.net/img/buttons/punainen.png");
+    color: #ED1C24;
+}
+
+#Sininen{
+    background: url("http://veneveistamo.azurewebsites.net/img/buttons/sininen.png");
+    color: #3F48CC;
+}
+
+#Vihrea{
+    background: url("http://veneveistamo.azurewebsites.net/img/buttons/vihrea.png");
+    color: #22B14C;
+}
+
+#Musta{
+    background: url("http://veneveistamo.azurewebsites.net/img/buttons/musta.png");
+    color: black;
+}
+
+#Ruskea{
+    background: url("http://veneveistamo.azurewebsites.net/img/buttons/ruskea.png");
+    color: #B97A57;
+}
+
+#Valkoinen{
+    background: url("http://veneveistamo.azurewebsites.net/img/buttons/valkoinen.png");
+    color: white;
+}
+#Punainen:hover, #Sininen:hover, #Vihrea:hover, #Musta:hover, #Ruskea:hover, #Valkoinen:hover {
+    border-color: orange;
+}
+.selected{
+    border:  4px solid orange;
+}
+.btn{
+    font-size: 24px;
+}
+#Tila{
+    margin-bottom: 2%;
+
+}
+.form-group{
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+.btn-group{
+    display: block;
+}

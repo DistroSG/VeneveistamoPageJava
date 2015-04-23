@@ -1,0 +1,14 @@
+
+.kek{
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 25%; 
+}
+
+.col-centered{
+    float:  none;
+    margin: 0 auto;
+}
