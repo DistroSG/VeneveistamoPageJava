@@ -32,7 +32,7 @@
 </head>
 <%
     Tietovarasto rekisteri = new Tietovarasto();
-    Varusteet varusteet = rekisteri.haeVaruste(3);
+    Varusteet varusteet = rekisteri.haeVaruste(6);
 
 %>
 <!-- NAVBAR ================================================== -->
