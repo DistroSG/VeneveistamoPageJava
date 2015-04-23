@@ -8,16 +8,76 @@
         <jsp-file>/WEB-INF/jspSivut/osta/index.jsp</jsp-file>
     </servlet>
     <servlet>
-        <servlet-name>airosivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/airo/index.jsp</jsp-file>
+        <servlet-name>manuaalitsivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/manuaalit/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>oppaatsivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/oppaat/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>ayskarisivu</servlet-name>
         <jsp-file>/WEB-INF/jspSivut/osta/varusteet/ayskari/index.jsp</jsp-file>
     </servlet>
     <servlet>
-        <servlet-name>vissysivu</servlet-name>
+        <servlet-name>varatappisivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/varatappi/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>airosivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/airo/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>melasivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/mela/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>perasinsivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/perasin/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>mastosivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/masto/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>aurinkovarjosivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/aurinkovarjo/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>sateenvarjosivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/sateenvarjo/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>aurinkotoiminenjaakaappisivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/aurinkotoiminen jaakaappi/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>ankkurisivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/ankkuri/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>tarjoilupoytasivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/tarjoilupoyta/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>kansituolisivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/kansituoli/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>pelastusrengassivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/pelastusrengas/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>vissysivusivu</servlet-name>
         <jsp-file>/WEB-INF/jspSivut/osta/varusteet/vissypullo/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>pehmustettutuhtosivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/pehmustettu tuhto/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>kultainenkeulakoristesivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/kultainen keulakoriste/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>tietoasivu</servlet-name>
@@ -50,17 +110,78 @@
         <url-pattern>/osta</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>airosivu</servlet-name>
-        <url-pattern>/osta/varusteet/airo</url-pattern>
+        <servlet-name>manuaalitsivu</servlet-name>
+        <url-pattern>/osta/varusteet/manuaali</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>oppaatsivu</servlet-name>
+        <url-pattern>/osta/varusteet/oppaat</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ayskarisivu</servlet-name>
         <url-pattern>/osta/varusteet/ayskari</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>vissysivu</servlet-name>
-        <url-pattern>/osta/varusteet/vissypullo</url-pattern>
+        <servlet-name>varatappi</servlet-name>
+        <url-pattern>/osta/varusteet/varatappi</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>airosivu</servlet-name>
+        <url-pattern>/osta/varusteet/airo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>perasinsivu</servlet-name>
+        <url-pattern>/osta/varusteet/perasin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>mastosivu</servlet-name>
+        <url-pattern>/osta/varusteet/masto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>aurinkovarjosivu</servlet-name>
+        <url-pattern>/osta/varusteet/aurinkovarjo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sateenvarjosivu</servlet-name>
+        <url-pattern>/osta/varusteet/sateenvarjo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>aurinkotoiminenjaakaappisivu</servlet-name>
+        <url-pattern>/osta/varusteet/aurinkotoiminenjaakaappi</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ankkurisivu</servlet-name>
+        <url-pattern>/osta/varusteet/ankkuri</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>tarjoilupoytasivu</servlet-name>
+        <url-pattern>/osta/varusteet/tarjoilupoyta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>kansituolisivu</servlet-name>
+        <url-pattern>/osta/varusteet/kansituoli</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>pelastusrengassivu</servlet-name>
+        <url-pattern>/osta/varusteet/pelastusrengas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>vissysivu</servlet-name>
+        <url-pattern>/osta/varusteet/vissy</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>pehmustettutuhtosivu</servlet-name>
+        <url-pattern>/osta/varusteet/pehmustettu tuhto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>kultainenkeulakoristesivu</servlet-name>
+        <url-pattern>/osta/varusteet/kultainen keulakoriste</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>airosivu</servlet-name>
+        <url-pattern>/osta/varusteet/airo</url-pattern>
+    </servlet-mapping>
+   
     <servlet-mapping>
         <servlet-name>tietoasivu</servlet-name>
         <url-pattern>/tietoa</url-pattern>
