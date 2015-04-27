@@ -48,7 +48,7 @@ public class Malli {
         Changer scandiesAway = new Changer();
         scandiesAway.addChange(new Change('ä', 'a'));
         scandiesAway.addChange(new Change('ö', 'o'));
-        return scandiesAway.change(nimi.toLowerCase());
+        return scandiesAway.change(nimi.replaceAll("\\s+", "").toLowerCase());
     }
 
     @Override

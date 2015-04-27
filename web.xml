@@ -8,12 +8,12 @@
         <jsp-file>/WEB-INF/jspSivut/osta/index.jsp</jsp-file>
     </servlet>
     <servlet>
-        <servlet-name>manuaalisivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/manuaali/index.jsp</jsp-file>
+        <servlet-name>manuaalitsivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/manuaalit/index.jsp</jsp-file>
     </servlet>
     <servlet>
-        <servlet-name>opassivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/opas/index.jsp</jsp-file>
+        <servlet-name>oppaatsivu</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/oppaat/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>ayskarisivu</servlet-name>
@@ -49,7 +49,7 @@
     </servlet>
     <servlet>
         <servlet-name>aurinkotoiminenjaakaappisivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/aurinkotoiminenjaakaappi/index.jsp</jsp-file>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/aurinkotoiminen jaakaappi/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>ankkurisivu</servlet-name>
@@ -68,16 +68,16 @@
         <jsp-file>/WEB-INF/jspSivut/osta/varusteet/pelastusrengas/index.jsp</jsp-file>
     </servlet>
     <servlet>
-        <servlet-name>vissypullosivu</servlet-name>
+        <servlet-name>vissysivusivu</servlet-name>
         <jsp-file>/WEB-INF/jspSivut/osta/varusteet/vissypullo/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>pehmustettutuhtosivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/pehmustettutuhto/index.jsp</jsp-file>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/pehmustettu tuhto/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>kultainenkeulakoristesivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/kultainenkeulakoriste/index.jsp</jsp-file>
+        <jsp-file>/WEB-INF/jspSivut/osta/varusteet/kultainen keulakoriste/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>tietoasivu</servlet-name>
@@ -110,28 +110,24 @@
         <url-pattern>/osta</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>manuaalisivu</servlet-name>
+        <servlet-name>manuaalitsivu</servlet-name>
         <url-pattern>/osta/varusteet/manuaali</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>opassivu</servlet-name>
-        <url-pattern>/osta/varusteet/opas</url-pattern>
+        <servlet-name>oppaatsivu</servlet-name>
+        <url-pattern>/osta/varusteet/oppaat</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ayskarisivu</servlet-name>
         <url-pattern>/osta/varusteet/ayskari</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>varatappisivu</servlet-name>
+        <servlet-name>varatappi</servlet-name>
         <url-pattern>/osta/varusteet/varatappi</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>airosivu</servlet-name>
         <url-pattern>/osta/varusteet/airo</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>melasivu</servlet-name>
-        <url-pattern>/osta/varusteet/mela</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>perasinsivu</servlet-name>
@@ -170,16 +166,16 @@
         <url-pattern>/osta/varusteet/pelastusrengas</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>vissypullosivu</servlet-name>
-        <url-pattern>/osta/varusteet/vissypullo</url-pattern>
+        <servlet-name>vissysivu</servlet-name>
+        <url-pattern>/osta/varusteet/vissy</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>pehmustettutuhtosivu</servlet-name>
-        <url-pattern>/osta/varusteet/pehmustettutuhto</url-pattern>
+        <url-pattern>/osta/varusteet/pehmustettu tuhto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>kultainenkeulakoristesivu</servlet-name>
-        <url-pattern>/osta/varusteet/kultainenkeulakoriste</url-pattern>
+        <url-pattern>/osta/varusteet/kultainen keulakoriste</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>tietoasivu</servlet-name>
