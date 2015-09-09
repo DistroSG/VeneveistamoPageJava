@@ -127,23 +127,21 @@
                 </div>
             </div>
         </div>
-    </div>
+        <footer class="footer">
+            <div class="container">
+                <p class="pull-right"><a href="#">Takaisin alkuun</a></p>
+                <p class="pull-left">© 2015 Parkki & Purkki ·  <a href="">Facebook</a> · <a href="">Twitter</a> · <a href="/veneveistamo/img/trash/kissa.gif">Älä vaivaudu!</a>
+            </div>
+        </footer>
+        <!-- Bootstrap core JavaScript ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- Latest compiled and minified JavaScript -->
+        <!-- jQuery library must be first -->
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <!-- bootsrap library -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="pull-right"><a href="#">Takaisin alkuun</a></p>
-            <p class="pull-left">© 2015 Parkki & Purkki ·  <a href="">Facebook</a> · <a href="">Twitter</a> · <a href="/veneveistamo/img/trash/kissa.gif">Älä vaivaudu!</a>
-        </div>
-    </footer>
-    <!-- Bootstrap core JavaScript ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- jQuery library must be first -->
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <!-- bootsrap library -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/js/ie10-viewport-bug-workaround.js"></script>
-</body>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    </body>
 </html>
