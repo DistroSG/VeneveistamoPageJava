@@ -57,22 +57,22 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-sm-6">
-                <img id="theImage" src="/veneveistamo/img/veneVarit/soutuvene/soutuveneVihrea.png" class="img-responsive" alt="Soutuvene">
+                <img id="theImage" src="/veneveistamo/img/veneVarit/purjevene/purjeveneSininen.png" class="img-responsive" alt="purjevene">
             </div>
             <div class="col-sm-6">
-                <h2>Soutuvene</h2>
+                <h2>Purjevene</h2>
                 <h2>50 000,00 €</h2>
                 <div>
                     <p> Tuotenumero:&nbsp</p><p>2548213</p>
                 </div>
                 <p>Väri:</p>
                 <div class="btn-group" role="group" aria-label="...">
-                    <input type="button" class="button 1 punainen" id="punainen" value="Punainen" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/soutuvene/soutuvenePunainen.png', 'punainen')" title="Punainen">
-                    <input type="button" class="button 1 sininen" id="sininen" value="Sininen" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/soutuvene/soutuveneSininen.png', 'sininen')" title="Sininen">
-                    <input type="button" class="button 1 vihrea" id="vihrea" value="Vihrea" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/soutuvene/soutuveneVihrea.png', 'vihrea')" title="Vihreä">
-                    <input type="button" class="button 1 musta" id="musta" value="Musta" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/soutuvene/soutuveneMusta.png', 'musta')" title="Musta">
-                    <input type="button" class="button 1 ruskea selected" id="ruskea" value="Ruskea" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/soutuvene/soutuveneRuskea.png', 'ruskea')" title="Ruskea">
-                    <input type="button" class="button 1 valkoinen" id="valkoinen" value="Valkoinen" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/soutuvene/soutuveneValkoinen.png', 'valkoinen')" title="Valkoinen">
+                    <input type="button" class="button 1 punainen" id="punainen" value="Punainen" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/purjevene/purjevenePunainen.png', 'punainen')" title="Punainen">
+                    <input type="button" class="button 1 sininen selected" id="sininen" value="Sininen" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/purjevene/purjeveneSininen.png', 'sininen')" title="Sininen">
+                    <input type="button" class="button 1 vihrea" id="vihrea" value="Vihrea" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/purjevene/purjeveneVihrea.png', 'vihrea')" title="Vihreä">
+                    <input type="button" class="button 1 musta" id="musta" value="Musta" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/purjevene/purjeveneMusta.png', 'musta')" title="Musta">
+                    <input type="button" class="button 1 ruskea" id="ruskea" value="Ruskea" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/purjevene/purjeveneRuskea.png', 'ruskea')" title="Ruskea">
+                    <input type="button" class="button 1 valkoinen" id="valkoinen" value="Valkoinen" onclick="pictureChange('theImage', '/veneveistamo/img/veneVarit/purjevene/purjeveneValkoinen.png', 'valkoinen')" title="Valkoinen">
                 </div>
                 <div class="form-group">
                     <p>Materiaali:</p>
@@ -114,7 +114,7 @@
     <footer class="footer">
         <div class="container">
             <p class="pull-right"><a href="#">Takaisin alkuun</a></p>
-            <p class="pull-left">© 2015 Parkki & Purkki ·  <a href="">Facebook</a> · <a href="">Twitter</a> · <a href="/veneveistamo/img/trash/kissa.gif">Älä vaivaudu!</a> · <a href="/veneveistamo/peli">Rest area</a>
+            <p class="pull-left">© 2015 Parkki & Purkki ·  <a href="">Facebook</a> · <a href="">Twitter</a> · <a href="/veneveistamo/img/trash/kissa.gif">Älä vaivaudu!</a> · <a href="/veneveistamo/peli">Rest area</a>
         </div>
     </footer>
     <!-- Bootstrap core JavaScript ================================================== -->
@@ -133,5 +133,5 @@
     <script src="/veneveistamo/js/panel.js"></script>
     <script src="/veneveistamo/js/service.ddlist.jquery.min.js"></script>
     <script src="/veneveistamo/js/ddList.js"></script>
-    </body>
+</body>
 </html>

@@ -7,6 +7,8 @@ package ekajdbcprojekti;
 
 import apuluokat.Change;
 import apuluokat.Changer;
+import apuluokat.CharChanger;
+import java.util.Locale;
 
 /**
  *
@@ -31,15 +33,15 @@ public class Varusteet {
     }
 
     public String getNimi() {
-        return nimi;
+        return CharChanger.firstCharToUpperCase(nimi);
     }
 
     public String getKuvaus() {
         return kuvaus;
     }
 
-    public double getHinta() {
-        return hinta;
+    public String getHinta() {
+        return String.format(Locale.GERMAN, "%.2f", hinta);
     }
 
     public String getPolku() {

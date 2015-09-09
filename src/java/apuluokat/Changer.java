@@ -8,7 +8,7 @@ public class Changer {
 
     public Changer() {
         this.changes = new ArrayList<>();
-        
+
     }
 
     public void addChange(Change change) {

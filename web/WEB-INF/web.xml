@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <welcome-file-list>
-        <welcome-file>/WEB-INF/jspSivut/index.html</welcome-file>
+        <welcome-file>/WEB-INF/jspSivut/index.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
         <servlet-name>ostasivu</servlet-name>
         <jsp-file>/WEB-INF/jspSivut/osta/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>kaleeri</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/mallit/kaleeri/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>kaleeriDelux</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/mallit/kaleeriDeLux/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>purjevene</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/mallit/purjevene/index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>soutuvene</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/osta/mallit/soutuvene/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>manuaalisivu</servlet-name>
@@ -81,33 +113,49 @@
     </servlet>
     <servlet>
         <servlet-name>tietoasivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/tietoa/index.html</jsp-file>
+        <jsp-file>/WEB-INF/jspSivut/tietoa/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>yhteystiedotsivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/yhteystiedot/index.html</jsp-file>
+        <jsp-file>/WEB-INF/jspSivut/yhteystiedot/index.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>asiakaspalstasivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/asiakaspalsta/index.html</jsp-file>
+        <jsp-file>/WEB-INF/jspSivut/asiakaspalsta/index.jsp</jsp-file>
     </servlet>
     <servlet>
-        <servlet-name>singINsivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/singIN/index.html</jsp-file>
+        <servlet-name>singIn</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/singIn/index.jsp</jsp-file>
     </servlet>
     <servlet>
-        <servlet-name>unohtunutsssivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/singIN/unohtunutss/index.html</jsp-file>
+        <servlet-name>singup</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/singIn/singup/index.jsp</jsp-file>
     </servlet>
     <servlet>
-        <servlet-name>singupsivu</servlet-name>
-        <jsp-file>/WEB-INF/jspSivut/singIN/singup/index.html</jsp-file>
+        <servlet-name>unohtunutss</servlet-name>
+        <jsp-file>/WEB-INF/jspSivut/singIn/unohtunutss/index.jsp</jsp-file>
     </servlet>
-        
+            
         
     <servlet-mapping>
         <servlet-name>ostasivu</servlet-name>
         <url-pattern>/osta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>kaleeri</servlet-name>
+        <url-pattern>/osta/mallit/kaleeri</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>kaleeriDelux</servlet-name>
+        <url-pattern>/osta/mallit/kaleeriDeLux</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>purjevene</servlet-name>
+        <url-pattern>/osta/mallit/purjevene</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>soutuvene</servlet-name>
+        <url-pattern>/osta/mallit/soutuvene</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>manuaalisivu</servlet-name>
@@ -194,18 +242,18 @@
         <url-pattern>/asiakaspalsta</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>singINsivu</servlet-name>
+        <servlet-name>singIn</servlet-name>
         <url-pattern>/singIn</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>unohtunutsssivu</servlet-name>
-        <url-pattern>/singIn/unohtunutss</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>singupsivu</servlet-name>
+        <servlet-name>singup</servlet-name>
         <url-pattern>/singIn/singup</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>unohtunutss</servlet-name>
+        <url-pattern>/singIn/unohtunutss</url-pattern>
+    </servlet-mapping>
+       
     <session-config>
         <session-timeout>
             30

@@ -17,17 +17,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="/img/logo/logo.ico">
+        <link rel="icon" href="/veneveistamo/img/logo/logo.ico">
 
         <title>Veneveistämö Parkki & Purkki</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="/css/osta.css" rel="stylesheet">
-        <link href="/css/yhteiset.css" rel="stylesheet">
-        <link href="/css/component.css" rel="stylesheet">
+        <link href="/veneveistamo/css/osta.css" rel="stylesheet">
+        <link href="/veneveistamo/css/yhteiset.css" rel="stylesheet">
+        <link href="/veneveistamo/css/component.css" rel="stylesheet">
     </head>
     <%
         Tietovarasto rekisteri = new Tietovarasto();
@@ -45,18 +45,18 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/">Parkki & Purkki</a>
+                        <a class="navbar-brand" href="/veneveistamo">Parkki & Purkki</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="/">Etusivu</a></li>
-                            <li class="active"><a href="/osta">Osta</a></li>
-                            <li><a href="/tietoa">Tietoa</a></li>
-                            <li><a href="/yhteystiedot">Yhteystiedot</a></li>
-                            <li><a href="/asiakaspalsta">Asiakaspalsta</a></li>
+                            <li><a href="/veneveistamo">Etusivu</a></li>
+                            <li class="active"><a href="/veneveistamo/osta">Osta</a></li>
+                            <li><a href="/veneveistamo/tietoa">Tietoa</a></li>
+                            <li><a href="/veneveistamo/yhteystiedot">Yhteystiedot</a></li>
+                            <li><a href="/veneveistamo/asiakaspalsta">Asiakaspalsta</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/singIn" role="button">Sign in/up</a></li>
+                            <li><a href="/veneveistamo/singIn" role="button">Sign in/up</a></li>
                         </ul>
                     </div>
                 </div>
@@ -82,11 +82,11 @@
             %>
             <div class="col-lg-3 grid cs-style-3">
                 <figure>
-                    <img src="/img/carousel/<%= malli.getPolku()%>/<%= malli.getPolku()%>SM.jpg" alt="<%= malli.getNimi()%>" class="img-responsive">
+                    <img src="/veneveistamo/img/carousel/<%= malli.getPolku()%>/<%= malli.getPolku()%>SM.jpg" alt="<%= malli.getNimi()%>" class="img-responsive">
                     <figcaption>
                         <h3><%= malli.getNimi()%></h3>
                         <span><%= malli.getMasto()%></span>
-                        <a href="/osta/malli/<%= malli.getPolku()%>">Osta</a>
+                        <a href="/veneveistamo/osta/mallit/<%= malli.getPolku()%>">Osta</a>
                     </figcaption>
                 </figure>
             </div>
@@ -115,10 +115,10 @@
             %>
             <div class="col-lg-3 grid cs-style-3">
                 <figure>
-                    <img src="/img/lisavarusteet/<%= varusteet.getPolku()%>.png" alt="<%= varusteet.getNimi()%>" class="img-responsive">
+                    <img src="/veneveistamo/img/lisavarusteet/<%= varusteet.getPolku()%>.png" alt="<%= varusteet.getNimi()%>" class="img-responsive">
                     <figcaption>
                         <h3><%= varusteet.getNimi()%></h3>
-                        <a href="/osta/varusteet/<%= varusteet.getPolku()%>">Osta</a>
+                        <a href="/veneveistamo/osta/varusteet/<%= varusteet.getPolku()%>">Osta</a>
                     </figcaption>
                 </figure>
             </div>
@@ -151,10 +151,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/veneveistamo/js/ie10-viewport-bug-workaround.js"></script>
 
     <!-- Custom library -->
-    <script src="/js/modernizr.custom.js"></script>
-    <script src="/js/toucheffects.js"></script>
+    <script src="/veneveistamo/js/modernizr.custom.js"></script>
+    <script src="/veneveistamo/js/toucheffects.js"></script>
 </body>
 </html>

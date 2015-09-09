@@ -16,19 +16,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/img/logo/logo.ico">
+    <link rel="icon" href="/veneveistamo/img/logo/logo.ico">
 
     <title>Veneveistämö Parkki & Purkki</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/css/osta.css" rel="stylesheet">
-    <link href="/css/panel.css" rel="stylesheet">
-    <link href="/css/yhteiset.css" rel="stylesheet">
-    <link href="/css/service.ddlist.jquery.css" rel="stylesheet">
-    <link href="/css/DDList.css" rel="stylesheet">
+    <link href="/veneveistamo/css/osta.css" rel="stylesheet">
+    <link href="/veneveistamo/css/panel.css" rel="stylesheet">
+    <link href="/veneveistamo/css/yhteiset.css" rel="stylesheet">
 </head>
 <%
     Tietovarasto rekisteri = new Tietovarasto();
@@ -51,14 +49,14 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="/">Etusivu</a></li>
-                        <li class="active"><a href="/osta">Osta</a></li>
-                        <li><a href="/tietoa">Tietoa</a></li>
-                        <li><a href="/yhteystiedot">Yhteystiedot</a></li>
-                        <li><a href="/asiakaspalsta">Asiakaspalsta</a></li>
+                        <li><a href="/veneveistamo">Etusivu</a></li>
+                        <li class="active"><a href="/veneveistamo/osta">Osta</a></li>
+                        <li><a href="/veneveistamo/tietoa">Tietoa</a></li>
+                        <li><a href="/veneveistamo/yhteystiedot">Yhteystiedot</a></li>
+                        <li><a href="/veneveistamo/asiakaspalsta">Asiakaspalsta</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/singIn" role="button">Sign in/up</a></li>
+                        <li><a href="/veneveistamo/singIn" role="button">Sign in/up</a></li>
                     </ul>
                 </div>
             </div>
@@ -71,7 +69,7 @@
     <div class="row">
 
         <div class="col-sm-6">
-            <img id="theImage" src="/img/lisavarusteet/<%= varusteet.getPolku()%>.png" class="img-responsive" alt="<%= varusteet.getNimi()%>">
+            <img id="theImage" src="/veneveistamo/img/lisavarusteet/<%= varusteet.getPolku()%>.png" class="img-responsive" alt="<%= varusteet.getNimi()%>">
         </div>
         <div class="col-sm-6">
             <h2><%= varusteet.getNimi()%></h2>
@@ -99,7 +97,7 @@
 <footer class="footer">
     <div class="container">
         <p class="pull-right"><a href="#">Takaisin alkuun</a></p>
-        <p class="pull-left">© 2015 Parkki & Purkki ·  <a href="">Facebook</a> · <a href="">Twitter</a> · <a href="/img/trash/kissa.gif">Älä vaivaudu!</a> · <a href="/peli">Rest area</a>
+        <p class="pull-left">© 2015 Parkki & Purkki ·  <a href="">Facebook</a> · <a href="">Twitter</a> · <a href="/veneveistamo/img/trash/kissa.gif">Älä vaivaudu!</a> · <a href="/veneveistamo/peli">Rest area</a>
     </div>
 </footer>
 <!-- Bootstrap core JavaScript ================================================== -->
@@ -111,11 +109,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/veneveistamo/js/ie10-viewport-bug-workaround.js"></script>
 
 <!-- Custom library -->
-<script src="/js/imgchange.js"></script>
-<script src="/js/panel.js"></script>
-<script src="/js/service.ddlist.jquery.min.js"></script>
-<script src="/js/ddList.js"></script>
+<script src="/veneveistamo/js/panel.js"></script>
 </body>

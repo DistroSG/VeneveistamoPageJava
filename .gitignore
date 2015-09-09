@@ -1,2 +1,7 @@
 /dist/
+<<<<<<< Upstream, based on origin/master
 /nbproject/private/
+=======
+/nbproject/private/
+/build/
+>>>>>>> 9d581ab Big refactoring

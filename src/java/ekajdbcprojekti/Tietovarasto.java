@@ -1,7 +1,6 @@
 package ekajdbcprojekti;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,8 +22,8 @@ public class Tietovarasto {
     }
 
     public Tietovarasto() {
-        this("com.mysql.jdbc.Driver", "jdbc:mysql://eu-cdbr-azure-north-c.cloudapp.net:3306/veneveistamo",
-                "bb372d8eaf1594", "c887b8c8");
+        this("com.mysql.jdbc.Driver", "jdbc:mysql://84.248.87.133:3306/veneveistamo",
+                "admin", "kek12345");
     }
 
     public List<Malli> haeMallit() {

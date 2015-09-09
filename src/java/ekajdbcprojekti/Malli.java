@@ -7,6 +7,7 @@ package ekajdbcprojekti;
 
 import apuluokat.Change;
 import apuluokat.Changer;
+import apuluokat.CharChanger;
 
 /**
  *
@@ -29,7 +30,7 @@ public class Malli {
     }
 
     public String getNimi() {
-        return nimi;
+        return CharChanger.firstCharToUpperCase(nimi);
     }
 
     public String getMasto() {
@@ -48,7 +49,7 @@ public class Malli {
         Changer scandiesAway = new Changer();
         scandiesAway.addChange(new Change('ä', 'a'));
         scandiesAway.addChange(new Change('ö', 'o'));
-        return scandiesAway.change(nimi.replaceAll("\\s+", "").toLowerCase());
+        return scandiesAway.change(nimi.replaceAll("\\s+", ""));
     }
 
     @Override
