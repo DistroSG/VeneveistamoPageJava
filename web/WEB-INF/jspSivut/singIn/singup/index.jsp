@@ -45,7 +45,7 @@
                                 <li><a href="/veneveistamo/asiakaspalsta">Asiakaspalsta</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="/veneveistamo/SingIn" role="button">Sign in/up</a></li>
+                                <li class="active"><a href="/veneveistamo/singIn" role="button">Sign in/up</a></li>
                             </ul>
                         </div>
                     </div>
