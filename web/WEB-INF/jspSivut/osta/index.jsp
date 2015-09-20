@@ -110,15 +110,13 @@
             <%  i = 0;
                 for (Varusteet varusteet : rekisteri.haeKaikkiVarusteet()) {
                     i++;
-
-
             %>
             <div class="col-lg-3 grid cs-style-3">
                 <figure>
-                    <img src="/veneveistamo/img/lisavarusteet/<%= varusteet.getPolku()%>.png" alt="<%= varusteet.getNimi()%>" class="img-responsive">
+                    <img src="/veneveistamo/img/<%= varusteet.getPolku()%>.png" alt="<%= varusteet.getNimi()%>" class="img-responsive">
                     <figcaption>
                         <h3><%= varusteet.getNimi()%></h3>
-                        <a href="/veneveistamo/osta/varusteet/<%= varusteet.getPolku()%>">Osta</a>
+                        <a href="/veneveistamo/osta/varuste?tuotenumero=<%= varusteet.getVarustenumero()%>">Osta</a>
                     </figcaption>
                 </figure>
             </div>

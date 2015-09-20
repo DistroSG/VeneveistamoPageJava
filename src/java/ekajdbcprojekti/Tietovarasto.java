@@ -1,6 +1,5 @@
 package ekajdbcprojekti;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -59,13 +58,13 @@ public class Tietovarasto {
             PreparedStatement hakulause = null;
             ResultSet tulosjoukko = null;
             try {
-                String hakuSql = "SELECT id, varusteet, kuvaus, hinta FROM varusteet;";
+                String hakuSql = "SELECT id, varusteet, kuvaus,kuva, hinta FROM varusteet;";
                 hakulause = yhteys.prepareStatement(hakuSql);
                 tulosjoukko = hakulause.executeQuery();
 
                 while (tulosjoukko.next()) {
                     varusteet.add(new Varusteet(tulosjoukko.getInt(1),
-                            tulosjoukko.getString(2), tulosjoukko.getString(3), tulosjoukko.getDouble(4)));
+                            tulosjoukko.getString(2), tulosjoukko.getString(3), tulosjoukko.getInt(4), tulosjoukko.getDouble(5)));
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -88,7 +87,7 @@ public class Tietovarasto {
         PreparedStatement hakulause = null;
         ResultSet tulosjoukko = null;
         try {
-            String hakuSql = "SELECT id, varusteet, kuvaus, hinta FROM varusteet where id=?";
+            String hakuSql = "SELECT id, varusteet, kuvaus, kuva, hinta FROM varusteet where id=?";
             hakulause = yhteys.prepareStatement(hakuSql);
             hakulause.setInt(1, varustenNumero);
             tulosjoukko = hakulause.executeQuery();
@@ -96,7 +95,8 @@ public class Tietovarasto {
                 return new Varusteet(tulosjoukko.getInt(1),
                         tulosjoukko.getString(2),
                         tulosjoukko.getString(3),
-                        tulosjoukko.getDouble(4));
+                        tulosjoukko.getInt(4),
+                        tulosjoukko.getDouble(5));
             } else {
                 return null;
             }

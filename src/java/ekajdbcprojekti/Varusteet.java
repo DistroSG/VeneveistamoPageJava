@@ -19,12 +19,14 @@ public class Varusteet {
     private final int varustenumero;
     private final String nimi;
     private final String kuvaus;
+    private final int kuva;
     private final double hinta;
 
-    public Varusteet(int varustenumero, String nimi, String kuvaus, double hinta) {
+    public Varusteet(int varustenumero, String nimi, String kuvaus, int kuva, double hinta) {
         this.varustenumero = varustenumero;
         this.nimi = nimi;
         this.kuvaus = kuvaus;
+        this.kuva = kuva;
         this.hinta = hinta;
     }
 
@@ -40,15 +42,23 @@ public class Varusteet {
         return kuvaus;
     }
 
+    public int getKuva() {
+        return kuva;
+    }
+
     public String getHinta() {
         return String.format(Locale.GERMAN, "%.2f", hinta);
     }
 
     public String getPolku() {
-        Changer scandiesAway = new Changer();
-        scandiesAway.addChange(new Change('ä', 'a'));
-        scandiesAway.addChange(new Change('ö', 'o'));
-        return scandiesAway.change(nimi.replaceAll("\\s+", "").toLowerCase());
+        if (kuva == 1) {
+            Changer scandiesAway = new Changer();
+            scandiesAway.addChange(new Change('ä', 'a'));
+            scandiesAway.addChange(new Change('ö', 'o'));
+            return "lisavarusteet/" + scandiesAway.change(nimi.replaceAll("\\s+", "").toLowerCase());
+        } else {
+            return "virheet/notFound";
+        }
     }
 
     @Override
